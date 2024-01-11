@@ -13,7 +13,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
     <div className="App">
       <Card 
       color="neutral"
-      variant="outlined"
+      variant="soft"
       sx={{ width: 400 }}>
         <div>
           <div className="flex justify-start items-center gap-3 my-1">
@@ -30,7 +30,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
 							<IconButton 
 							size='lg'
 							color="primary" 
-							variant="soft" 
+							variant="outlined" 
 							onClick={() => { window.open(mainLink, '_blank'); }} 
 							sx={{ borderRadius: '50%', p: 1, mx: 2 }}>
 								<Open20Filled />
@@ -40,7 +40,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
 							<IconButton 
 							size='lg'
 							color="neutral" 
-							variant="soft" 
+							variant="outlined" 
 							onClick={() => { window.open(projectLink, '_blank'); }} 
 							sx={{ borderRadius: '50%' }}>
 								{isOnGithub

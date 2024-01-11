@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './components/Project';
+import Tech from './components/Tech';
 
 function App() {
   const illinimemoriesDescription = 
@@ -43,45 +44,49 @@ function App() {
   inspire my love for this artform.`
 
   return (
-    <div className="flex flex-wrap justify-center items-center gap-5 mt-6">
-      <Project 
-      name={'Illini Memories'} 
-      emoji={'🌎'} 
-      description={illinimemoriesDescription} 
-      mainLink={"https://illinimemories.onrender.com/"}
-      projectLink={'https://gitlab.com/jcampo37/finalproject'}
-      isOnGithub={false} />
+    <>
+      <Tech />
+      <div className='text-4xl font-bold font-txt m-10 mt-24 text-center'>Projects</div>
+      <div className="flex flex-wrap justify-center items-center gap-5 my-6">
+        <Project 
+        name={'Illini Memories'} 
+        emoji={'🌎'} 
+        description={illinimemoriesDescription} 
+        mainLink={"https://illinimemories.onrender.com/"}
+        projectLink={'https://gitlab.com/jcampo37/finalproject'}
+        isOnGithub={false} />
 
-      <Project 
-      name={'ConnectUs'} 
-      emoji={'💞'} 
-      description={connectusDescription} 
-      projectLink={'https://github.com/vmanep2/cs465project'}
-      isOnGithub={true} />
+        <Project 
+        name={'ConnectUs'} 
+        emoji={'💞'} 
+        description={connectusDescription} 
+        projectLink={'https://github.com/vmanep2/cs465project'}
+        isOnGithub={true} />
 
-      <Project 
-      name={'Structy'} 
-      emoji={'🌱'} 
-      description={structyDescription} 
-      projectLink={'https://github.com/sahasramesh/homebrew-structy'}
-      isOnGithub={true} />
+        <Project 
+        name={'Structy'} 
+        emoji={'🌱'} 
+        description={structyDescription} 
+        projectLink={'https://github.com/sahasramesh/homebrew-structy'}
+        isOnGithub={true} />
 
-      <Project 
-      name={'Chicago Art'} 
-      emoji={'🖼️'} 
-      description={chicagoartDescription} 
-      mainLink={'https://sahasramesh.com/chicago-art/'}
-      projectLink={'https://github.com/sahasramesh/chicago-art'}
-      isOnGithub={true} />
+        <Project 
+        name={'Chicago Art'} 
+        emoji={'🖼️'} 
+        description={chicagoartDescription} 
+        mainLink={'https://sahasramesh.com/chicago-art/'}
+        projectLink={'https://github.com/sahasramesh/chicago-art'}
+        isOnGithub={true} />
 
-      <Project 
-      name={'Korvai Collection'} 
-      emoji={'🎶'} 
-      description={korvaisDescription} 
-      mainLink={'https://sahasramesh.com/rajeshwari/'}
-      projectLink={'https://github.com/sahasramesh/rajeshwari'}
-      isOnGithub={true} />
-    </div>
+        <Project 
+        name={'Korvai Collection'} 
+        emoji={'🎶'} 
+        description={korvaisDescription} 
+        mainLink={'https://sahasramesh.com/rajeshwari/'}
+        projectLink={'https://github.com/sahasramesh/rajeshwari'}
+        isOnGithub={true} />
+      </div>
+    </>
   );
 }
 
