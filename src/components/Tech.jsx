@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Tooltip from '@mui/joy/Tooltip';
+
+
 import AndroidstudioOriginal from 'devicons-react/lib/icons/AndroidstudioOriginal';
 import CplusplusOriginal from 'devicons-react/lib/icons/CplusplusOriginal';
 import Css3OriginalWordmark from 'devicons-react/lib/icons/Css3OriginalWordmark';
@@ -34,27 +37,131 @@ function Tech() {
 				</div>
 			</div>
       <div className='flex flex-wrap justify-center items-center gap-12 md:mx-40'>
-				<Html5OriginalWordmark size="70"  />
+				<Tooltip title="HTML" variant="outlined" arrow placement="top" >
+					<div>
+						<Html5OriginalWordmark size="70"  />
+					</div>
+				</Tooltip>
+
+				<Tooltip title="CSS" variant="outlined" arrow placement="top" >
+					<div>
 				<Css3OriginalWordmark size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Sass" variant="outlined" arrow placement="top" >
+					<div>
 				<SassOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Tailwind" variant="outlined" arrow placement="top" >
+					<div>
 				<TailwindcssPlain size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Material UI / Joy UI" variant="outlined" arrow placement="top" >
+					<div>
 				<MaterialuiOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="D3js" variant="outlined" arrow placement="top" >
+					<div>
 				<D3jsPlain size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="JavaScript" variant="outlined" arrow placement="top" >
+					<div>
 				<JavascriptOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="TypeScript" variant="outlined" arrow placement="top" >
+					<div>
 				<TypescriptOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="React" variant="outlined" arrow placement="top" >
+					<div>
 				<ReactOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Vue" variant="outlined" arrow placement="top" >
+					<div>
 				<VuejsOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Node" variant="outlined" arrow placement="top" >
+					<div>
 				<NodejsOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="MongoDB" variant="outlined" arrow placement="top" >
+					<div>
 				<MongodbOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Firebase" variant="outlined" arrow placement="top" >
+					<div>
 				<FirebasePlain size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Python" variant="outlined" arrow placement="top" >
+					<div>
 				<PythonPlain size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="C++" variant="outlined" arrow placement="top" >
+					<div>
         <CplusplusOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Java" variant="outlined" arrow placement="top" >
+					<div>
 				<JavaOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Git" variant="outlined" arrow placement="top" >
+					<div>
         <GitOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Github" variant="outlined" arrow placement="top" >
+					<div>
         <GithubOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Gitlab" variant="outlined" arrow placement="top" >
+					<div>
         <GitlabOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="VS Code" variant="outlined" arrow placement="top" >
+					<div>
 				<VscodeOriginal size="70"  />
+				</div>
+				</Tooltip>
+
+				<Tooltip title="Android Studio" variant="outlined" arrow placement="top" >
+					<div>
 				<AndroidstudioOriginal size="70"  />
+				</div>
+				</Tooltip>
       </div>
     </>
   );

@@ -14,7 +14,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
       <Card 
       color="neutral"
       variant="soft"
-      sx={{ width: 400 }}>
+      sx={{ width: 360 }}>
         <div>
           <div className="flex justify-start items-center gap-3 my-1">
             {/* <img src={logo} width="50px" height="50px" alt={name} /> */}
@@ -32,7 +32,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
 							color="primary" 
 							variant="outlined" 
 							onClick={() => { window.open(mainLink, '_blank'); }} 
-							sx={{ borderRadius: '50%', p: 1, mx: 2 }}>
+							sx={{ borderRadius: '50%', p: 1 }}>
 								<Open20Filled />
 							</IconButton>
 						}
@@ -42,11 +42,8 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
 							color="neutral" 
 							variant="outlined" 
 							onClick={() => { window.open(projectLink, '_blank'); }} 
-							sx={{ borderRadius: '50%' }}>
-								{isOnGithub
-									? <LogoGithub />
-									: <GitlabFilled />
-								}
+							sx={{ borderRadius: '50%', ml: 2 }}>
+								<LogoGithub />
 							</IconButton>
 						}
           </div>
