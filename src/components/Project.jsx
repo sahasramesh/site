@@ -5,7 +5,6 @@ import IconButton from '@mui/joy/IconButton';
 
 import { Open20Filled } from '@ricons/fluent'
 import { LogoGithub } from '@ricons/carbon'
-import { GitlabFilled } from '@ricons/antd'
 
 
 const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }) => {

@@ -10,6 +10,8 @@ module.exports = {
       'inter': 'Inter'
     }
   },
-  plugins: [],
+  plugins: [
+    require('@pyncz/tailwind-mask-image')
+  ],
 }
 

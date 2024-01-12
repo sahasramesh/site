@@ -4,3 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mask1 {
+    -webkit-mask-image: url('./img/graph.png');
+    mask-image: url('./img/graph.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    width: 350px;
+}

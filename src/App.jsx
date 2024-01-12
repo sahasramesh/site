@@ -1,6 +1,9 @@
 import React from 'react';
-import Project from './components/Project';
+import Profile from './components/Profile';
 import Tech from './components/Tech';
+import Project from './components/Project';
+
+import profile from './img/profile.png';
 
 function App() {
   const illinimemoriesDescription = 
@@ -44,6 +47,7 @@ function App() {
 
   return (
     <>
+      <Profile pic={profile}/>
       <Tech />
       <div className='text-4xl font-bold font-txt m-10 mt-24 text-center'>Projects</div>
       <div className="flex flex-wrap justify-center items-center gap-5 my-6">
