@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 const Profile = ({ pic }) => {
   return (
     <>
-      <div className="text-center flex flex-col gap-12 lg:flex-row justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-24">
+      <div className="z-1 text-center flex flex-col gap-12 lg:flex-row justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 lg:p-24 py-24">
         <div className="mask1">
           <img src={pic} width='320' alt="Profile" className='translate-x-3' />
         </div>

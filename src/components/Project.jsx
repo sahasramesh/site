@@ -3,11 +3,10 @@ import Card from '@mui/joy/Card';
 import Divider from '@mui/joy/Divider';
 import IconButton from '@mui/joy/IconButton';
 
-import { Open20Filled } from '@ricons/fluent'
-import { LogoGithub } from '@ricons/carbon'
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-
-const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }) => {
+const Project = ({ name, emoji, description, mainLink, projectLink }) => {
   return (
     <div className="App">
       <Card 
@@ -16,7 +15,6 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
       sx={{ width: 360 }}>
         <div>
           <div className="flex justify-start items-center gap-3 my-1">
-            {/* <img src={logo} width="50px" height="50px" alt={name} /> */}
 						<div className="text-3xl">{emoji}</div>
             <div className="text-lg font-bold font-txt">{name}</div>
           </div>
@@ -32,7 +30,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
 							variant="outlined" 
 							onClick={() => { window.open(mainLink, '_blank'); }} 
 							sx={{ borderRadius: '50%', p: 1 }}>
-								<Open20Filled />
+								<OpenInNewIcon />
 							</IconButton>
 						}
 						{projectLink &&
@@ -42,7 +40,7 @@ const Project = ({ name, emoji, description, mainLink, projectLink, isOnGithub }
 							variant="outlined" 
 							onClick={() => { window.open(projectLink, '_blank'); }} 
 							sx={{ borderRadius: '50%', ml: 2 }}>
-								<LogoGithub />
+								<GitHubIcon />
 							</IconButton>
 						}
           </div>

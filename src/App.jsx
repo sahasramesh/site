@@ -2,6 +2,8 @@ import React from 'react';
 import Profile from './components/Profile';
 import Tech from './components/Tech';
 import Project from './components/Project';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 import profile from './img/profile.png';
 
@@ -83,6 +85,8 @@ function App() {
         mainLink={'https://sahasramesh.com/rajeshwari/'}
         projectLink={'https://github.com/sahasramesh/rajeshwari'} />
       </div>
+      {/* <Header /> */}
+      <Footer />
     </>
   );
 }
