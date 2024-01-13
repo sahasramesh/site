@@ -29,8 +29,8 @@ import VuejsOriginal from 'devicons-react/lib/icons/VuejsOriginal';
 
 function Tech() {
   return (
-    <>
-			<div className='m-10 mt-24'>
+    <div className="py-24">
+			<div className='mb-16'>
 				<div className='text-4xl font-bold font-txt text-center'>My Tech Stack</div>
 				<div className='font-txt text-center mt-2 text-slate-500'>
 					Technologies I've been working with recently
@@ -163,7 +163,7 @@ function Tech() {
 				</div>
 				</Tooltip>
       </div>
-    </>
+    </div>
   );
 }
 

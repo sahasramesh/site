@@ -1,8 +1,9 @@
 import React from 'react';
+import Divider from '@mui/joy/Divider';
+
 import Profile from './components/Profile';
 import Tech from './components/Tech';
 import Project from './components/Project';
-import Header from './components/Header';
 import Footer from './components/Footer';
 
 import profile from './img/profile.png';
@@ -40,6 +41,20 @@ function App() {
   with TypeScript and Axios, images courtesy of the Art Institute of
   Chicago public API.`
 
+  const picstokicksDescription =
+  `Generate a shoe colorway based on the color palette of any
+  inputted image. Open a GUI from the command line, choose an image
+  with your native file viewer, and add a name to generate custom kicks.
+  Built in Python with OpenCV, PIL, and Tkinter, and repackaged as
+  a Discord bot using discord.py and Replit.`
+
+  const blabberDescription =
+  `Make 2D speech animation less tedious with Blabber, a command line tool
+  that transforms an audio file into a png sequence of timed mouth frames.
+  Uses AWS Transcribe and S3 to transform audio into text, the CMU Pronouncing 
+  Dictionary to match words to syllabes, and Python to match syllabes to
+  mouth shapes.`
+
   const korvaisDescription =
   `Korvais are mathematical patterns of melody and rhythm used in improvisational
   South Indian classical music. This is a personal collection of korvais that I have been exposed to 
@@ -51,41 +66,57 @@ function App() {
     <>
       <Profile pic={profile}/>
       <Tech />
-      <div className='text-4xl font-bold font-txt m-10 mt-24 text-center'>Projects</div>
-      <div className="flex flex-wrap justify-center items-center gap-5 my-6">
-        <Project 
-        name={'Illini Memories'} 
-        emoji={'🌎'} 
-        description={illinimemoriesDescription} 
-        mainLink={"https://illinimemories.onrender.com/"} />
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-12">
+        <div className='text-4xl font-bold font-txt m-10 text-center text-slate-50'>Projects</div>
+        <div className="flex flex-wrap justify-center items-center gap-5 my-6">
+          <Project 
+          name={'Illini Memories'} 
+          emoji={'🌎'} 
+          description={illinimemoriesDescription} 
+          mainLink={"https://illinimemories.onrender.com/"} />
 
-        <Project 
-        name={'ConnectUs'} 
-        emoji={'💞'} 
-        description={connectusDescription} 
-        projectLink={'https://github.com/vmanep2/cs465project'} />
+          <Project 
+          name={'ConnectUs'} 
+          emoji={'💞'} 
+          description={connectusDescription} 
+          projectLink={'https://github.com/vmanep2/cs465project'} />
 
-        <Project 
-        name={'Structy'} 
-        emoji={'🌱'} 
-        description={structyDescription} 
-        projectLink={'https://github.com/sahasramesh/homebrew-structy'} />
+          <Project 
+          name={'Structy'} 
+          emoji={'🌱'} 
+          description={structyDescription} 
+          projectLink={'https://github.com/sahasramesh/homebrew-structy'} />
 
-        <Project 
-        name={'Chicago Art'} 
-        emoji={'🖼️'} 
-        description={chicagoartDescription} 
-        mainLink={'https://sahasramesh.com/chicago-art/'}
-        projectLink={'https://github.com/sahasramesh/chicago-art'} />
+          <Project 
+          name={'Chicago Art'} 
+          emoji={'🖼️'} 
+          description={chicagoartDescription} 
+          mainLink={'https://sahasramesh.com/chicago-art/'}
+          projectLink={'https://github.com/sahasramesh/chicago-art'} />
 
-        <Project 
-        name={'Korvai Collection'} 
-        emoji={'🎶'} 
-        description={korvaisDescription} 
-        mainLink={'https://sahasramesh.com/rajeshwari/'}
-        projectLink={'https://github.com/sahasramesh/rajeshwari'} />
+          <Project 
+          name={'PICSTOKICKS'} 
+          emoji={'👟'} 
+          description={picstokicksDescription} 
+          mainLink={'https://sahasramesh.com/picstokicks'}
+          projectLink={'https://github.com/sahasramesh/picstokicks'} />
+
+          <Project 
+          name={'Blabber'} 
+          emoji={'🗣️'} 
+          description={blabberDescription} 
+          mainLink={'https://www.youtube.com/watch?v=GQyRmB_UWmc'} />
+
+          <Project 
+          name={'Korvai Collection'} 
+          emoji={'🎶'} 
+          description={korvaisDescription} 
+          mainLink={'https://sahasramesh.com/rajeshwari/'}
+          projectLink={'https://github.com/sahasramesh/rajeshwari'} />
+        </div>
       </div>
       {/* <Header /> */}
+      <Divider />
       <Footer />
     </>
   );

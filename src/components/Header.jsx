@@ -29,18 +29,6 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <div className="text-xl font-bold text-white">Logo</div>
           <div className="flex space-x-4">
-            <a href="#" className='text-gray-800 hover:text-gray-600'>
-              Home
-            </a>
-            <a href="#" className={`text-${isAtTop ? 'white' : 'gray-800'} hover:text-gray-600`}>
-              About
-            </a>
-            <a href="#" className={`text-${isAtTop ? 'white' : 'gray-800'} hover:text-gray-600`}>
-              Services
-            </a>
-            <a href="#" className={`text-${isAtTop ? 'white' : 'gray-800'} hover:text-gray-600`}>
-              Contact
-            </a>
           </div>
         </nav>
       </div>
