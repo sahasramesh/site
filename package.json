@@ -1,7 +1,7 @@
 {
 	"name": "site",
 	"version": "0.1.0",
-	"homepage": "https://sahasramesh.github.io/site",
+	"homepage": "https://sahasramesh.com",
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.11.3",
@@ -33,7 +33,7 @@
 	},
 	"scripts": {
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+  	"deploy": "gh-pages -b master -d build -r https://github.com/sahasramesh/sahasramesh.github.io.git --add",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
@@ -65,7 +65,7 @@
 		"@ricons/ionicons5": "^0.12.0",
 		"@ricons/material": "^0.12.0",
 		"@ricons/tabler": "^0.12.0",
-		"gh-pages": "^6.1.1",
+		"gh-pages": "^6.3.0",
 		"tailwindcss": "^3.4.1"
 	}
 }

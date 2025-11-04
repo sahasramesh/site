@@ -8,7 +8,7 @@ const Profile = ({ pic }) => {
           <img src={pic} width='320' alt="Profile" className='translate-x-3' />
         </div>
         <div>
-          <div className='text-6xl font-bold font-txt text-slate-50 mb-2'>Sahas Ramesh</div>
+          <div className='text-6xl font-bold font-txt text-slate-50 mb-2'>Bahas Ramesh</div>
             <code>
 							<TypeAnimation
 								sequence={[

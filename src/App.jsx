@@ -70,6 +70,13 @@ function App() {
         <div className='text-4xl font-bold font-txt m-10 text-center text-slate-50'>Projects</div>
         <div className="flex flex-wrap justify-center items-center gap-5 my-6">
           <Project 
+          name={'korvais.com'} 
+          emoji={'🎶'} 
+          description={korvaisDescription} 
+          mainLink={'https://korvais.com/'}
+          projectLink={'https://github.com/sahasramesh/korvais'} />
+          
+          <Project 
           name={'Illini Memories'} 
           emoji={'🌎'} 
           description={illinimemoriesDescription} 
@@ -106,16 +113,8 @@ function App() {
           emoji={'🗣️'} 
           description={blabberDescription} 
           mainLink={'https://www.youtube.com/watch?v=GQyRmB_UWmc'} />
-
-          <Project 
-          name={'Korvai Collection'} 
-          emoji={'🎶'} 
-          description={korvaisDescription} 
-          mainLink={'https://sahasramesh.com/rajeshwari/'}
-          projectLink={'https://github.com/sahasramesh/rajeshwari'} />
         </div>
       </div>
-      {/* <Header /> */}
       <Divider />
       <Footer />
     </>
