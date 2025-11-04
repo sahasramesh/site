@@ -2,6 +2,8 @@ import React from 'react';
 import Divider from '@mui/joy/Divider';
 
 import Profile from './components/Profile';
+import About from './components/About';
+import Certifications from './components/Certifications';
 import Tech from './components/Tech';
 import Project from './components/Project';
 import Footer from './components/Footer';
@@ -65,9 +67,16 @@ function App() {
   return (
     <>
       <Profile pic={profile}/>
+      <About />
+      <Certifications />
       <Tech />
       <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-12">
-        <div className='text-4xl font-bold font-txt m-10 text-center text-slate-50'>Projects</div>
+        <div className="text-center m-10">
+          <div className="text-4xl font-bold font-txt text-slate-50 mb-2">Projects</div>
+          <div className="font-txt text-slate-200">
+            Expression through experimentation
+          </div>
+        </div>
         <div className="flex flex-wrap justify-center items-center gap-5 my-6">
           <Project 
           name={'korvais.com'} 
@@ -75,7 +84,7 @@ function App() {
           description={korvaisDescription} 
           mainLink={'https://korvais.com/'}
           projectLink={'https://github.com/sahasramesh/korvais'} />
-          
+
           <Project 
           name={'Illini Memories'} 
           emoji={'🌎'} 
@@ -105,7 +114,7 @@ function App() {
           name={'PICSTOKICKS'} 
           emoji={'👟'} 
           description={picstokicksDescription} 
-          mainLink={'https://sahasramesh.com/picstokicks'}
+          mainLink={'https://sahasramesh.com/legacy/picstokicks'}
           projectLink={'https://github.com/sahasramesh/picstokicks'} />
 
           <Project 

@@ -23,7 +23,7 @@
 		"@types/react": "^18.2.47",
 		"@types/react-dom": "^18.2.18",
 		"babel-plugin-macros": "^3.1.0",
-		"devicons-react": "^1.2.6",
+		"devicons-react": "^1.5.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-scripts": "5.0.1",
@@ -33,7 +33,7 @@
 	},
 	"scripts": {
 		"predeploy": "npm run build",
-  	"deploy": "gh-pages -b master -d build -r https://github.com/sahasramesh/sahasramesh.github.io.git --add",
+		"deploy": "gh-pages -b master -d build -r https://github.com/sahasramesh/sahasramesh.github.io.git --add",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
