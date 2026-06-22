@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Management Portal</title>
+
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #d4d0c8;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    color: #000;
+    font-size: 13px;
+  }
+
+  .topbar {
+    height: 34px;
+    background: #000080;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 30px auto;
+  }
+
+  .card {
+    background: #d4d0c8;
+    border: 2px solid;
+    border-color: white #555 #555 white;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field.full {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    margin-bottom: 4px;
+  }
+
+  input,
+  select,
+  textarea {
+    background: white;
+    border: 2px solid;
+    border-color: #555 white white #555;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+  }
+
+  textarea {
+    min-height: 90px;
+  }
+
+  button {
+    margin-top: 20px;
+    background: #d4d0c8;
+    border: 2px solid;
+    border-color: white #555 #555 white;
+    padding: 6px 18px;
+    font-family: "MS Sans Serif", Arial;
+    cursor: pointer;
+  }
+
+  button:active {
+    border-color: #555 white white #555;
+  }
+
+  .footer {
+    margin-top: 20px;
+    font-size: 11px;
+  }
+
+  .success {
+    display: none;
+    margin-top: 20px;
+    background: #d4d0c8;
+    border: 2px solid;
+    border-color: white #555 #555 white;
+    padding: 15px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    Expense Management Portal
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>New Expense Report</h1>
+      <div class="subtitle">
+        Submit an expense reimbursement request for review.
+        All submissions are subject to standard approval workflows.
+      </div>
+
+      <form
+        id="expenseForm"
+        action="https://formspree.io/f/mdarokob"
+        method="POST"
+      >
+        <div class="grid">
+          <div class="field">
+            <label>Employee ID</label>
+            <input
+              type="text"
+              name="employee_id"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label>Expense Date</label>
+            <input
+              type="date"
+              name="expense_date"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label>Category</label>
+            <select name="category" required>
+              <option value="" selected disabled>Select category</option>
+              <option>Meals</option>
+              <option>Drinks</option>
+              <option>Travel</option>
+              <option>Lodging</option>
+              <option>Subscriptions</option>
+              <option>Events</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Amount (USD)</label>
+            <input
+              type="number"
+              step="0.01"
+              min="0"
+              name="amount"
+              required
+            >
+          </div>
+
+          <div class="field full">
+            <label>Vendor</label>
+            <input
+              type="text"
+              name="vendor"
+            >
+          </div>
+
+          <div class="field full">
+            <label>Business Purpose</label>
+            <textarea
+              name="purpose"
+              required
+            ></textarea>
+          </div>
+
+          <div class="field full">
+            <label>Additional Notes</label>
+            <textarea
+              name="notes"
+              placeholder="Add any additional context for the expense reviewer..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit">
+            Submit Expense Report
+          </button>
+        </div>
+      </form>
+
+      <div id="success" class="success">
+        Expense report submitted successfully.<br><br>
+        Status: Pending Review
+      </div>
+    </div>
+
+    <div class="footer">
+      Corporate Expense Management Portal v2.4.1<br>
+      Requests are reviewed within 1-3 business days.
+      For expedited processing, please cut a SEV2.5
+      to our with appropriate business justification.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("expenseForm");
+    const success = document.getElementById("success");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        success.style.display = "block";
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth"
+        });
+      }
+    });
+  </script>
+</body>
+</html>
